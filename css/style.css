@@ -15,9 +15,11 @@
 
 html,
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Trebuchet MS', sans-serif;
   line-height: 1.6;
   scroll-behavior: smooth;
+
+
 }
 
 a {
@@ -247,6 +249,10 @@ img {
 }
 
 /* Learn Topics */
+.learn {
+  margin-top: 8rem;
+}
+
 .topics {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -254,7 +260,10 @@ img {
 }
 
 .topic img {
+
   transition: transform 0.3s;
+  height: 204px;
+  width: 590px;
 }
 
 .topic img:hover {
