@@ -206,7 +206,7 @@ img {
 
 /* Hero */
 .hero {
-  background: #000 url('../images/header-background.webp') center center/cover no-repeat;
+  background: url('../images/header-background.webp') center center/cover no-repeat;
   padding: 11.5rem 2rem 8rem;
   color: #fff;
   overflow-x: hidden;
