@@ -130,7 +130,7 @@ img {
 }
 
 .navbar-page {
-  background-color: #000;
+  background-color: var(--primary-color);
 }
 
 .navbar.navbar-scroll {
@@ -305,6 +305,8 @@ img {
 .summary .section-lists {
   background: #fff;
   padding: 2rem;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
+
 }
 
 .summary .list-header {
@@ -516,6 +518,7 @@ img {
   gap: 1rem;
   margin-top: 2rem;
 }
+
 
 /* Footer */
 .footer {
