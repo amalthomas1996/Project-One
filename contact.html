@@ -110,16 +110,16 @@
 
     <section class="contact-form section">
       <div class="container-sm">
-        <p>
-          We love to create dependable business are solutions for small and
-          medium sized word companies. Email our office using
+        <p class="stats-text">
+          We provide comprehensive courses in DevOps, Cybersecurity, Cloud Computing, Data Science, AI,ML, Programming,
+          Project Management. Email our office using
           contact@tutor.com or call us using +91 904-802-1665
         </p>
 
         <form action="https://formspree.io/f/mkgwrdeq" method="POST" id="contactForm" onsubmit="handleSubmit(event)">
-          <input type="text" name="name" placeholder="Name" />
-          <input type="email" name="email" placeholder="Email" />
-          <textarea name="message" placeholder="Message"></textarea>
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea name="message" placeholder="Message" required></textarea>
           <button type="submit" class="btn">Send Message</button>
         </form>
       </div>
