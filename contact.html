@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="icon" href="./images/favicon.png" />
+  <title>Tutor</title>
+</head>
+
+<body>
+
+  <body>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <div class="navbar-flex container">
+        <a href="/" aria-label="Logo Home Link">
+          <img src="images/logo.svg" alt="Tutor Logo" />
+        </a>
+        <div id="mobile-menu-items" class="main-menu-items">
+          <ul class="main-menu-list">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="chapters.html">Chapters</a>
+            </li>
+            <li>
+              <a href="summary.html">Summary</a>
+            </li>
+            <li>
+              <a href="takeaways.html">Takeaways</a>
+            </li>
+            <li>
+              <a href="author.html">Author</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+            <li>
+              <a href="https://facebook.com" target="_blank" aria-label="Follow Us On Facebook">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com" target="_blank" aria-label="Follow Us On Twitter">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+          <!-- Hamburger button -->
+          <div class="mobile-menu-toggle" role="button" aria-expanded="false" aria-controls="mobile-menu-items"
+            aria-label="Open mobile menu" tabindex="0">
+            <i class="fas fa-bars fa-2x"></i>
+          </div>
+          <!-- Mobile Menu Items -->
+          <div class="mobile-menu-items">
+            <ul class="mobile-menu-list">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="chapters.html">Chapters</a>
+              </li>
+              <li>
+                <a href="summary.html">Summary</a>
+              </li>
+              <li>
+                <a href="takeaways.html">Takeaways</a>
+              </li>
+              <li>
+                <a href="author.html">Author</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+              <li>
+                <a href="https://facebook.com" target="_blank" aria-label="Follow Us On Facebook">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com" target="_blank" aria-label="Follow Us On Twitter">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Inner Header -->
+    <header class="inner-header">
+      <div class="container-sm">
+        <h1>Contact Us</h1>
+      </div>
+    </header>
+
+    <section class="contact-form section">
+      <div class="container-sm">
+        <p>
+          We love to create dependable business are solutions for small and
+          medium sized word companies. Email our office using
+          contact@tutor.com or call us using +91 904-802-1665
+        </p>
+
+        <form action="https://formspree.io/f/mkgwrdeq" method="POST" id="contactForm" onsubmit="handleSubmit(event)">
+          <input type="text" name="name" placeholder="Name" />
+          <input type="email" name="email" placeholder="Email" />
+          <textarea name="message" placeholder="Message"></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Location -->
+    <section class="location section">
+      <div class="container-sm">
+        <h2>Office Location</h2>
+        <p>
+          207, Second Floor, World Trade Center, P.O, Infopark, Kakkanad, Kochi, Kerala 682042
+        </p>
+        <div class="map">
+          <iframe
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=:%20207,%20Second%20Floor,%20World%20Trade%20Center,%20P.O,%20Infopark,%20Kakkanad,%20Kochi,%20Kerala%20682042+(tutor)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Social -->
+    <section class="social section">
+      <div class="container">
+        <p>Follow us on social media for updates and news about our courses.</p>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank" aria-label="Follow Us On Facebook">
+            <i class="fa-brands fa-facebook fa-2x"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" aria-label="Follow Us On Twitter">
+            <i class="fa-brands fa-twitter fa-2x"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" aria-label="Follow Us On Instagram"><i
+              class="fa-brands fa-instagram fa-2x"></i>
+          </a>
+          <a href="https://linkdin.com" target="_blank" aria-label="Follow Us On Linkdin"><i
+              class="fa-brands fa-linkedin fa-2x"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank" aria-label="Follow Us On Youtube">
+            <i class="fa-brands fa-youtube fa-2x"></i>
+          </a>
+          <a href="https://pinterest.com" target="_blank" aria-label="Follow Us On Pinterest">
+            <i class="fa-brands fa-pinterest fa-2x"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-flex">
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <p>&copy; 2024 - 2025 Tutor. All rights reserved</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+
+  </body>
+
+</html>
