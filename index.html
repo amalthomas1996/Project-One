@@ -477,17 +477,20 @@
     </div>
   </section>
 
-  <!-- Newsletter -->
-  <section class="newsletter section" id="newsletter">
-    <div class="container newsletter-flex">
-      <h2>Subscribe To Our Newsletter</h2>
+
+  <section class="contact-form section">
+    <div class="container-sm">
       <p>
-        Stay updated with the latest news, offers, and insights from our
-        platform. Join our newsletter community today!
+        We love to create dependable business are solutions for small and
+        medium sized word companies. Email our office using
+        contact@tutor.com or call us using +91 904-802-1665
       </p>
-      <form>
-        <input type="email" name="email" id="email" placeholder="Enter your email" />
-        <button type="submit" class="btn">Subscribe</button>
+
+      <form action="https://formspree.io/f/mkgwrdeq" method="POST" id="contactForm" onsubmit="handleSubmit(event)">
+        <input type="text" name="name" placeholder="Name" />
+        <input type="email" name="email" placeholder="Email" />
+        <textarea name="message" placeholder="Message"></textarea>
+        <button type="submit" class="btn">Send Message</button>
       </form>
     </div>
   </section>
