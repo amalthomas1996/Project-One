@@ -23,10 +23,38 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("contactForm").addEventListener("submit", handleSubmit);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("contactForm").addEventListener("submit", handleSubmit);
+});
+
 function handleSubmit(event) {
   event.preventDefault(); // Prevent the default form submission
 
   const form = document.getElementById("contactForm");
+  const name = form.name.value.trim();
+  const email = form.email.value.trim();
+  const message = form.message.value.trim();
+
+  if (!name) {
+    alert("Please enter your name.");
+    return;
+  }
+
+  if (!email) {
+    alert("Please enter your email.");
+    return;
+  }
+
+  if (!validateEmail(email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+
+  if (!message) {
+    alert("Please enter your message.");
+    return;
+  }
+
   const formData = new FormData(form);
 
   fetch("https://formspree.io/f/mkgwrdeq", {
@@ -48,3 +76,11 @@ function handleSubmit(event) {
       alert("Error sending message: " + error.message);
     });
 }
+
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+
+
+
