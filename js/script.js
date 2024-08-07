@@ -18,11 +18,6 @@ window.addEventListener('scroll', function () {
     navbar.classList.remove('navbar-scroll');
   }
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("contactForm").addEventListener("submit", handleSubmit);
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("contactForm").addEventListener("submit", handleSubmit);
 });
@@ -81,6 +76,4 @@ function validateEmail(email) {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(email);
 }
-
-
 
