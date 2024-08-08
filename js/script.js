@@ -76,6 +76,11 @@ function validateEmail(email) {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(email);
 }
+document.addEventListener('scroll', function () {
+  const parallax = document.querySelector('.hero');
+  const scrolled = window.scrollY;
+  parallax.style.backgroundPositionY = scrolled * 0.03 + 'px'; // Adjust the multiplier for effect strength
+});
 
 
 let currentIndex = 0;
