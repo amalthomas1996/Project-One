@@ -141,12 +141,13 @@ img {
 .navbar-flex {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+
 }
 
 .navbar img {
   width: 81px;
   height: 32px;
+
 }
 
 .navbar .main-menu-list {
@@ -219,6 +220,7 @@ img {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  margin-top: -32px;
 
 }
 
