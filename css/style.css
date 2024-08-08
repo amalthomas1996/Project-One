@@ -511,7 +511,7 @@ img {
   text-align: center;
   color: white;
   font-size: 1rem;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--primary-color);
   padding: 8px;
   border-radius: 5px;
   margin-top: 5px;
@@ -1005,12 +1005,25 @@ img {
 }
 
 .takeaways-cards .card {
+  display: flex;
   flex-direction: row;
   text-align: left;
+  transition: transform 0.3s ease;
+
 }
 
 .takeaways-cards .card i {
   margin-right: 1rem;
+
+}
+
+
+
+
+
+.takeaways-cards .card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 /* Details */
@@ -1322,7 +1335,7 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .details-flex,
+  .takeaways-cards .details-flex,
   .details+.details .details-flex,
   .stats .stats-flex {
     flex-direction: column;
