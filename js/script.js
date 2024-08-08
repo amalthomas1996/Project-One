@@ -77,3 +77,40 @@ function validateEmail(email) {
   return re.test(email);
 }
 
+
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+
+const slider = document.querySelector('.slider');
+for (let i = 0; i < 3; i++) {
+  slider.appendChild(slides[i].cloneNode(true));
+}
+
+function moveSlide(step) {
+  const slideWidth = slides[0].offsetWidth;
+  const totalSlidesNow = slides.length;
+
+  currentIndex = (currentIndex + step + totalSlides) % totalSlidesNow;
+  const offset = -currentIndex * slideWidth;
+
+  slider.style.transform = `translateX(${offset}px)`;
+
+  if (currentIndex === 0) {
+    setTimeout(() => {
+      slider.style.transition = 'none';
+      slider.style.transform = `translateX(0)`;
+      currentIndex = 1;
+    }, 500);
+  } else if (currentIndex === totalSlides) {
+    setTimeout(() => {
+      slider.style.transition = 'none';
+      slider.style.transform = `translateX(-${(totalSlides - 1) * slideWidth}px)`;
+      currentIndex = totalSlides - 2;
+    }, 500);
+  }
+  slider.style.transition = 'transform 0.5s ease-in-out';
+}
+
+document.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
+document.querySelector('.next').addEventListener('click', () => moveSlide(1));

@@ -23,6 +23,9 @@
             <a href="index.html">Home</a>
           </li>
           <li>
+            <a href="courses.html">Courses</a>
+          </li>
+          <li>
             <a href="chapters.html">Chapters</a>
           </li>
           <li>
@@ -32,7 +35,7 @@
             <a href="takeaways.html">Takeaways</a>
           </li>
           <li>
-            <a href="author.html">Author</a>
+            <a href="author.html">Tutors</a>
           </li>
           <li>
             <a href="contact.html">Contact</a>
@@ -58,6 +61,9 @@
               <a href="index.html">Home</a>
             </li>
             <li>
+              <a href="courses.html">Courses</a>
+            </li>
+            <li>
               <a href="chapters.html">Chapters</a>
             </li>
             <li>
@@ -67,7 +73,7 @@
               <a href="takeaways.html">Takeaways</a>
             </li>
             <li>
-              <a href="author.html">Author</a>
+              <a href="author.html">Tutors</a>
             </li>
             <li>
               <a href="contact.html">Contact</a>
@@ -78,35 +84,53 @@
       </div>
     </div>
   </nav>
+  <div class="section-header tutor-header">
+    <h2>Meet the Tutors</h2>
+    <div class="heading-border"></div>
+    <p>
+      Explore the core concepts and techniques covered in our video
+      course. Each chapter is designed to equip you with essential skills
+      for video creation.
+    </p>
+  </div>
 
-  <section class="details section" id="author">
-    <div class="container details-flex">
-      <img src="images/author.webp" alt="details" />
-      <div class="details-content">
-        <h2>Author Information</h2>
-        <div class="heading-border"></div>
-        <p>
-          Learn about the author's background, expertise, and contributions to
-          the course content.
-        </p>
-        <ul>
-          <li>
-            <i class="fas fa-chevron-circle-right text-primary"></i><strong>Expertise: </strong> Highly experienced and
-            motivated Author.
-          </li>
-          <li>
-            <i class="fas fa-chevron-circle-right text-primary"></i><strong>Experience: </strong> 7 years of experience
-            in teaching.
-          </li>
-          <li>
-            <i class="fas fa-chevron-circle-right text-primary"></i><strong>Skills: </strong>Computer
-            programming,Software engineering
-          </li>
-        </ul>
-        <a href="#" class="btn">See Details</a>
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide">
+        <img src="./images/tutor1.avif" alt="Taylor Hill.">
+        <h2 class="slide-caption">Taylor Hill.</h2>
       </div>
+      <div class="slide">
+        <img src="./images/tutor(1).webp" alt="Linus Torvalds">
+        <h2 class="slide-caption">Linus Torvalds</h2>
+      </div>
+      <div class="slide">
+        <img src="./images/tutor(5).webp" alt="Person 3">
+        <h2 class="slide-caption">Donald Knuth</h2>
+      </div>
+      <div class="slide">
+        <img src="./images/tutor(3).webp" alt="Person 3">
+        <h2 class="slide-caption">Brian Kernighan</h2>
+      </div>
+      <div class="slide">
+        <img src="./images/tutor(6).webp" alt="Person 3">
+        <h2 class="slide-caption">Kaia Jordan Gerber</h2>
+      </div>
+      <div class="slide">
+        <img src="./images/tutor(7).webp" alt="Person 3">
+        <h2 class="slide-caption">Ken Thompson</h2>
+      </div>
+      <div class="slide">
+        <img src="./images//tutor8.webp" alt="Person 3">
+        <h2 class="slide-caption">Cara Delevingne</h2>
+      </div>
+      <!-- Add more slides as needed -->
     </div>
-  </section>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+
+
   <section class="details section" id="details">
     <div class="container details-flex">
       <img src="images/details.webp" alt="details" />
@@ -117,11 +141,15 @@
           Gain insight into the course curriculum, structure, and what to
           expect throughout your learning journey.
         </p>
-        <a href="#" class="btn">See Details</a>
+        <a href="courses.html" class="btn">See Details</a>
       </div>
     </div>
   </section>
 
+  <!--float -->
+  <div class="floating-section">
+    <a href="courses.html"><button class="get-course-button">Explore Courses</button></a>
+  </div>
 
 </body>
 <footer class="footer">
