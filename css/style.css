@@ -206,15 +206,11 @@ img {
 
 /* Hero */
 
-
-/* Hero Section */
 .hero {
-  background: #000 url('../images/header-background.webp') center center/cover no-repeat;
+  background: #fc5d66 url('../images/back.webp') center center/cover no-repeat;
   background-attachment: fixed;
-  /* Parallax Effect */
   color: #fff;
   padding: 80px 20px;
-  /* Adjust padding as needed */
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -223,7 +219,7 @@ img {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* Full viewport height */
+
 }
 
 .hero .hero-flex {
@@ -236,41 +232,38 @@ img {
 
 .hero-content {
   max-width: 800px;
-  /* Restrict the width of the content */
   margin: 0 auto;
-  /* Center content horizontally */
+
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   line-height: 1.3;
-  font-weight: 700;
+  font-weight: 800;
   margin: 0 0 20px;
-  /* Adjust margin for spacing */
+
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   margin: 0 0 20px;
-  /* Adjust margin for spacing */
 }
 
 
 
 .hero a.btn:hover {
-  background-color: #005bb5;
+  background-color: var(--primary-color);
 }
 
 .hero img {
   width: 100%;
   max-width: 600px;
-  /* Adjust the max-width as needed */
   margin-top: 20px;
   border-radius: 8px;
 }
 
-/* Responsive Styles */
+/* hero responsive Styles */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.5rem;
