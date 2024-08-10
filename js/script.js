@@ -77,19 +77,7 @@ function validateEmail(email) {
   return re.test(email);
 }
 
-// parallax effect
 
-window.addEventListener('load', function () {
-  const parallax = document.querySelector('.hero');
-
-  // Adding initial background position for stability
-  parallax.style.backgroundPosition = 'center center';
-
-  window.addEventListener('scroll', function () {
-    const scrolled = window.scrollY;
-    parallax.style.backgroundPositionY = `${scrolled * 0.1}px`;
-  });
-});
 
 //slider
 let currentIndex = 0;
