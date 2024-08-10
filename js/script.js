@@ -77,47 +77,61 @@ function validateEmail(email) {
   return re.test(email);
 }
 
+// parallax effect
 
-
-document.addEventListener('scroll', function () {
+window.addEventListener('load', function () {
   const parallax = document.querySelector('.hero');
-  const scrolled = window.scrollY;
-  parallax.style.backgroundPositionY = scrolled * 0.1 + 'px';
+
+  // Adding initial background position for stability
+  parallax.style.backgroundPosition = 'center center';
+
+  window.addEventListener('scroll', function () {
+    const scrolled = window.scrollY;
+    parallax.style.backgroundPositionY = `${scrolled * 0.1}px`;
+  });
 });
 
-
+//slider
 let currentIndex = 0;
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
-
 const slider = document.querySelector('.slider');
-for (let i = 0; i < 3; i++) {
-  slider.appendChild(slides[i].cloneNode(true));
+const slideWidth = slides[0].offsetWidth;
+
+function updateSlider() {
+  const slideWidth = slides[0].offsetWidth;
+  const offset = -currentIndex * slideWidth;
+  slider.style.transform = `translateX(${offset}px)`;
 }
 
 function moveSlide(step) {
-  const slideWidth = slides[0].offsetWidth;
-  const totalSlidesNow = slides.length;
+  const screenWidth = window.innerWidth;
 
-  currentIndex = (currentIndex + step + totalSlides) % totalSlidesNow;
-  const offset = -currentIndex * slideWidth;
+  if (screenWidth <= 600) {
+    // Show one slide at a time on small screens
+    currentIndex = (currentIndex + step + totalSlides) % totalSlides;
+    updateSlider();
 
-  slider.style.transform = `translateX(${offset}px)`;
-
-  if (currentIndex === 0) {
-    setTimeout(() => {
-      slider.style.transition = 'none';
-      slider.style.transform = `translateX(0)`;
-      currentIndex = 1;
-    }, 500);
-  } else if (currentIndex === totalSlides) {
-    setTimeout(() => {
-      slider.style.transition = 'none';
-      slider.style.transform = `translateX(-${(totalSlides - 1) * slideWidth}px)`;
-      currentIndex = totalSlides - 2;
-    }, 500);
+    // Handle looping
+    if (currentIndex === 0 || currentIndex === totalSlides - 1) {
+      setTimeout(() => {
+        slider.style.transition = 'none';
+        if (currentIndex === 0) {
+          slider.style.transform = `translateX(0)`;
+          currentIndex = 1;
+        } else if (currentIndex === totalSlides - 1) {
+          slider.style.transform = `translateX(-${(totalSlides - 1) * slideWidth}px)`;
+          currentIndex = totalSlides - 2;
+        }
+        updateSlider();
+        slider.style.transition = 'transform 0.5s ease-in-out';
+      }, 500);
+    }
+  } else {
+    // Adjust for larger screens if needed
+    currentIndex = (currentIndex + step + totalSlides) % totalSlides;
+    updateSlider();
   }
-  slider.style.transition = 'transform 0.5s ease-in-out';
 }
 
 document.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
