@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("contactForm").addEventListener("submit", handleSubmit);
 });
 
+//form
+
 function handleSubmit(event) {
   event.preventDefault(); // Prevent the default form submission
 
