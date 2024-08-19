@@ -18,6 +18,8 @@ window.addEventListener('scroll', function () {
     navbar.classList.remove('navbar-scroll');
   }
 });
+
+
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("contactForm").addEventListener("submit", handleSubmit);
 });
